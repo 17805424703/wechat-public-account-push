@@ -29,11 +29,11 @@ const USER_CONFIG = {
 
     /** 每日N句 */
     // 金山每日一句
-    CIBA: true,
+    CIBA:false,
     // 每日一言
     oneTalk: false,
     // 土味情话(彩虹屁)
-    earthyLoveWords: false,
+    earthyLoveWords:  true,
     // 朋友圈文案
     momentCopyrighting: false,
     // 毒鸡汤
@@ -42,7 +42,7 @@ const USER_CONFIG = {
     poetry: false,
 
     /** 星座运势 */
-    horoscope: false,
+    horoscope:  true,
 
     /** 生日消息和节日消息 */
     birthdayMessage: true,
@@ -82,12 +82,12 @@ const USER_CONFIG = {
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
-          type: '*生日', name: '老婆', year: '1999', date: '03-18',
+          type: '*生日', name: '老婆', year: '1999', date: '02-01',
         },
       
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
         {
-          type: '生日', name: '李四', year: '1999', date: '02-01',
+          type: '生日', name: '李敏大宝贝', year: '1999', date: '03-18',
         },
       ],
       // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
@@ -218,7 +218,7 @@ const USER_CONFIG = {
       // 一般都填自己
       name: '自己',
       // 自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: '',
+      id: 'oerHp50-w66Y29aYpJmt_FZXs484',
     }
     // 你可以不断按格式往下增加
     // ...
