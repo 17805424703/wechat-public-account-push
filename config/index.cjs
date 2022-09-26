@@ -37,9 +37,9 @@ const USER_CONFIG = {
     // 朋友圈文案
     momentCopyrighting: false,
     // 毒鸡汤
-    poisonChickenSoup: false,
+    poisonChickenSoup: true,
     // 古诗古文
-    poetry: false,
+    poetry: true
 
     /** 星座运势 */
     horoscope:  true,
@@ -67,7 +67,7 @@ const USER_CONFIG = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: 'oerHp50-I0iwBAV-AB5CcmFX-Dy0',
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: 'GoRkE0UiE8RCTpzFcxbUF6Kmmz3HumO8peLNJa7EpBE',
+      useTemplateId: 'OR4VVDNSvmMM-0Z6eNOyjIwojYNygzuQMzIMk6sXyLU',
       // 所在省份
       province: '河南',
       // 所在城市
@@ -82,7 +82,7 @@ const USER_CONFIG = {
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
-          type: '*生日', name: '老婆', year: '1999', date: '02-01',
+          type: '*生日', name: '亲爱的老婆', year: '1999', date: '02-01',
         },
       
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
@@ -95,112 +95,20 @@ const USER_CONFIG = {
         // 在一起的日子
         { keyword: 'love_day', date: '2021-07-12' },
 
-      ],
-      // 课程表相关配置
-      // 如果courseSchedule不存在或者为空（null）则认为没有课程
-      // 如果courseSchedule是一个数组，则认为不区分单双周，直接填写星期几对应的课表数据即可
-      // 如果courseSchedule是一个对象（如下面所示）
-      courseSchedule: {
-        // 单双周的基准
-        benchmark: {
-          // 这里设置一个日期，用来作为判断课表是否单双周的依据
-          date: '2022-09-23',
-          // 该日期是否为单周
-          isOdd: true
-        },
-        // 课表
-        courses: {
-          // 单周课表
-          // 从星期一到星期日（星期六和星期日的课表数组可不填写）
-          odd: [
-            // 例子，周一的课表
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周二
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周三
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周四
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周五
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周六
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ],
-            // 周日
-            [
-              '08:00-09:35 高等数学',
-              '09:50-11:25 高等物理'
-            ]
-          ],
-          // 双周课表
-          even: [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-          ]
-        }
-      },
-    },
+      ],    
     {
       name: '李敏大宝贝',
       id: '',
-      useTemplateId: '',
-      province: '',
-      city: '',
-      horoscopeDate: '',
+      useTemplateId: 'OR4VVDNSvmMM-0Z6eNOyjIwojYNygzuQMzIMk6sXyLU',
+      province: '河南',
+      city: '荥阳',
+      horoscopeDate: '03-18',
       horoscopeDateType: '',
       openUrl: 'https://wangxinleo.cn',
       festivals: [],
       customizedDateList: [],
       courseSchedule: null
-    },
-    {
-      name: '老婆2',
-      id: '',
-      useTemplateId: '',
-      province: '',
-      city: '',
-      horoscopeDate: '',
-      horoscopeDateType: '',
-      openUrl: 'https://wangxinleo.cn',
-      festivals: [],
-      customizedDateList: [],
-      courseSchedule: null
-    },
-    {
-      name: '老婆3',
-      id: '',
-      useTemplateId: '',
-      province: '',
-      city: '',
-      horoscopeDate: '',
-      horoscopeDateType: '',
-      openUrl: 'https://wangxinleo.cn',
-      festivals: [],
-      customizedDateList: [],
-      courseSchedule: null
-    }
+    }    
     // 你可以不断按格式往下增加
     // ...
   ],
@@ -210,7 +118,7 @@ const USER_CONFIG = {
    */
 
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: '',
+  CALLBACK_TEMPLATE_ID: '	xKVhMksxM6-M9csirHmO2suZULWJXHiqjaw67dtbhik',
 
   // 接收成功回调消息的微信号，（一般来说只填自己的微信号, name填不填无所谓）
   CALLBACK_USERS: [
@@ -305,7 +213,24 @@ const USER_CONFIG = {
    * */
   SLOT_LIST: [
     // 这样配置的话，就会每次发送这句话
-    { keyword: 'encourage_oneself', contents: '你主要的问题在于读书太少而想得太多' },
+    { keyword: 'encourage_oneself', 
+     contents: [
+       '你主要的问题在于读书太少而想得太多',
+       '生活充满了惊喜。如果你不逼迫自己，你不会知道你有多伟大',
+       '想一千遍，做一遍。一次美丽的陨落总比无意义的漂泊好',
+       '要想赢，就不能怕输。不怕输，结果不一定赢。但如果你害怕失败，你就注定会失败',
+       '这一秒不放弃，下一秒就会有希望',
+       '人生与其说你有不幸的事实存在，倒不如说是你的悲观的观念所带来的',
+       '你现在的态度，决定你十年后是人物，还是废物',
+       '我本微末凡尘，但也心向天空',
+       '不要追寻前人的脚印，而是追求他们的目标',
+       '记住：你是你生命的船长；走自己的路，何必在乎其它',
+       '人生就像一杯茶，不会苦一辈子，但总会苦一阵子',  
+       '希望以后的自己，做有用的事，说勇敢的话，想美好的事，睡安稳的觉，把时间用在进步上，而不是抱怨上',
+       '努力的意义，并不是为了金钱和名誉，最重要的是，它让你认清自己，让你看见原来自己还有这样的一面',
+       '生活给予每个人的东西是不一样的，而幸福的含义却相同，谁欣然接受了生活给予，谁就把握了生活的幸福'
+     ]
+    },
     // 这样配置的话，就会每次随机选一句话发送
     {
       keyword: 'lover_prattle',
@@ -313,7 +238,12 @@ const USER_CONFIG = {
         '因为太喜欢你，所以看谁都像是情敌。',
         '申请成为你爱里的永久居民。',
         '你很傻，你很笨，可我还是很羡慕你，因为你有我',
-        '遇见你，就好像捡到了100斤的运气'
+        '遇见你，就好像捡到了100斤的运气',
+        '一分钟里只想了你一秒，五十九秒在回味',
+        '对于你我贪得无厌，哪还来得及思考退路',
+        '你说高处不胜寒，我便拱手江山讨你欢',
+        '我上辈子不知行了多少善，才能在最美的年华里遇见你',
+        '我喜欢你，像云漂泊九万里，不曾歇息'        
       ],
     }
     // 你可以不断按格式往下增加
